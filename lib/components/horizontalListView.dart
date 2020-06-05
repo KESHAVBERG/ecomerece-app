@@ -30,10 +30,10 @@ class _HorizontalListState extends State<HorizontalList> {
             imageLocation: "hori/H4.jpg",
             caption: "shirt",
           ),
-          Category(
-            imageLocation: "hori/H5.jpg",
-            caption: "glasses",
-          ),
+//          Category(
+//            imageLocation: "hori/H5.jpg",
+//            caption: "glasses",
+//          ),
 //          Category(
 //            imageLocation: "assests/H6.jpg",
 //            caption: "caption",

@@ -33,12 +33,12 @@ class _ProductsState extends State<Products> {
       "old_price": 34,
       "new_price": 0,
     },
-    {
-      "name": "shoes1",
-      "picture": "hori/H5.jpg",
-      "old_price": 34,
-      "new_price": 0,
-    },
+//    {
+//      "name": "shoes1",
+//      "picture": "hori/H5.jpg",
+//      "old_price": 34,
+//      "new_price": 0,
+//    },
   ];
 
   @override

@@ -41,6 +41,8 @@ android {
         applicationId "com.iinc.ecommerceapp"
         minSdkVersion 16
         targetSdkVersion 28
+        multiDexEnabled true
+
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
     }
@@ -61,3 +63,4 @@ flutter {
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 }
+apply plugin: 'com.google.gms.google-services'

@@ -24,6 +24,18 @@ dependencies:
   flutter:
     sdk: flutter
   carousel_pro: ^1.0.0
+  firebase_auth: ^0.16.1
+  firebase_storage: ^3.1.6
+  cloud_firestore: ^0.13.6
+  shared_preferences: ^0.5.7+3
+  fluttertoast: ^4.0.1
+  google_sign_in: ^4.5.1
+
+
+
+
+
+
 
 
 
@@ -48,18 +60,12 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-    - assests/T1.jpg
-    - assests/T2.jpg
-    - assests/T3.jpg
-    - assests/T4.jpg
-    - assests/T5.jpg
+
     - hori/H1.jpg
     - hori/H2.jpg
     - hori/H3.jpg
     - hori/H4.jpg
-    - hori/H5.jpg
-    - hori/H6.jpg
-    - hori/H7.jpg
+
 
 
 
