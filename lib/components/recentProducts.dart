@@ -83,15 +83,19 @@ class SingleGridView extends StatelessWidget {
           child: Material(
             child: InkWell(
               onTap: () {
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => ProductDetails(
-                              product_detail_name: prod_name,
-                              product_detail_new_price: prod_newPrice,
-                              product_detail_old_price: prod_oldPrice,
-                              product_detail_picture: prod_pic,
-                            )));
+                /// only with front end
+//                Navigator.push(
+//                    context,
+//                    MaterialPageRoute(
+//                        builder: (context) => ProductDetails(
+//                              product_detail_name: prod_name,
+//                              product_detail_new_price: prod_newPrice,
+//                              product_detail_old_price: prod_oldPrice,
+//                              product_detail_picture: prod_pic,
+//                            )));
+                /// only with front end
+                /// with back end starts
+
               },
               child: GridTile(
                 footer: Container(

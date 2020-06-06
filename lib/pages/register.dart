@@ -42,23 +42,23 @@ class _RegisterState extends State<Register> {
     });
   }
 
-  Future registerUser() async {
-    AuthResult result = await firebaseAuth.createUserWithEmailAndPassword(
-        email: emailEditController.text, password: passwordEditController.text);
-
-    FirebaseUser user = result.user;
-    Map <String , dynamic>userMap = {
-    "name":nameEditController.text,
-      "email":emailEditController.text,
-//      "profilePic":user.photoUrl,
-      "id":user.uid,
-      "gender":gender
-    };
-    userService.createUser(userMap, user.uid);
-
-    Navigator.pushReplacement(
-        context, MaterialPageRoute(builder: (context) => MyHomePage()));
-  }
+//  Future registerUser() async {
+//    AuthResult result = await firebaseAuth.createUserWithEmailAndPassword(
+//        email: emailEditController.text, password: passwordEditController.text);
+//
+//    FirebaseUser user = result.user;
+//    Map <String , dynamic>userMap = {
+//    "name":nameEditController.text,
+//      "email":emailEditController.text,
+////      "profilePic":user.photoUrl,
+//      "id":user.uid,
+//      "gender":gender
+//    };
+//    userService.createUser(userMap, user.uid);
+//
+//    Navigator.pushReplacement(
+//        context, MaterialPageRoute(builder: (context) => MyHomePage()));
+//  }
 
   @override
   Widget build(BuildContext context) {
@@ -139,7 +139,7 @@ class _RegisterState extends State<Register> {
                       FlatButton(
                         onPressed: () async {
                           if (_formKey.currentState.validate()) {
-                            registerUser();
+//                            registerUser();
                           }
                         },
                         child: Text("register"),
@@ -151,6 +151,8 @@ class _RegisterState extends State<Register> {
                         },
                         child: Text("login"),
                       ),
+
+
                     ],
                   ),
                 ),

@@ -13,6 +13,7 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   final GoogleSignIn googleSignIn = GoogleSignIn();
+  TextEditingController searchEditController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -41,28 +42,33 @@ class _MyHomePageState extends State<MyHomePage> {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text("shop"),
-        actions: <Widget>[
-          IconButton(
-            onPressed: () {
-              googleSignIn.signOut();
-              Navigator.pushReplacement(
-                  context, MaterialPageRoute(builder: (context) => Login()));
-            },
-            color: Colors.white,
-            icon: Icon(Icons.exit_to_app),
+        iconTheme: IconThemeData(
+          color: Colors.black,
+        ),
+        elevation: 0.0,
+        backgroundColor: Colors.white,
+        title: TextFormField(
+          controller: searchEditController,
+          decoration: InputDecoration(
+            fillColor: Colors.grey,
+//            border:OutlineInputBorder(
+////              borderRadius: BorderRadius.circular(10)
+//            ) ,
+            hintText: "search..."
           ),
+        ),
+        actions: <Widget>[
           IconButton(
             onPressed: () {
               Navigator.push(
                   context, MaterialPageRoute(builder: (context) => Cart()));
             },
-            color: Colors.white,
+            color: Colors.black,
             icon: Icon(Icons.shopping_cart),
           ),
           IconButton(
             onPressed: () {},
-            color: Colors.white,
+            color: Colors.black,
             icon: Icon(Icons.search),
           ),
         ],
@@ -71,6 +77,7 @@ class _MyHomePageState extends State<MyHomePage> {
       ///***************Drawer
       drawer: Drawer(
         child: ListView(
+          shrinkWrap: true,
           children: <Widget>[
             UserAccountsDrawerHeader(
               currentAccountPicture: CircleAvatar(
@@ -84,7 +91,9 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             Container(
               child: FlatButton.icon(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pop(context);
+                  },
                   icon: Icon(Icons.arrow_back),
                   label: Text("home")),
             ),
@@ -123,7 +132,17 @@ class _MyHomePageState extends State<MyHomePage> {
                   onPressed: () {},
                   icon: Icon(Icons.help),
                   label: Text("about")),
-            )
+            ),
+
+            IconButton(
+              onPressed: () {
+                googleSignIn.signOut();
+                Navigator.pushReplacement(
+                    context, MaterialPageRoute(builder: (context) => Login()));
+              },
+              color: Colors.white,
+              icon: Icon(Icons.exit_to_app),
+            ),
           ],
         ),
       ),
@@ -151,8 +170,8 @@ class _MyHomePageState extends State<MyHomePage> {
 
             ///* *********
             ///     horiZontalListvie
-
-            HorizontalList(),
+//TODO use if you want it
+//            HorizontalList(),
 
             /// text for recent products
             Padding(
